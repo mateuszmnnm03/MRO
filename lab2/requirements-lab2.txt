@@ -1,0 +1,7 @@
+# Zalecany Python 3.12. Instalacja: python -m pip install -r requirements-lab2.txt
+torch>=2.5
+torchvision>=0.20
+numpy>=1.26
+matplotlib>=3.8
+scikit-learn>=1.5,<2
+ipykernel>=6

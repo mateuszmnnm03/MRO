@@ -1,0 +1,13 @@
+Termin wykonania jutro o 23:59•Dozwolone jest wiele przesłanych zadań
+Laboratorium 2
+Reprezentacje obrazów w sieci konwolucyjnej 
+Czas pracy na zajęciach: 85 minut. Każdy student oddaje własny raport. 
+- Przygotuj kod sieci z częścią konwolucyjną, operacją wypłaszczenia (Flatten), trzema ukrytymi warstwami gęstymi i osobną warstwą wyjściową do klasyfikacji. Warstwy gęste tworzą perceptron wielowarstwowy (ang. Multilayer Perceptron, MLP). 
+- Wybierz jeden zbiór: MNIST (cyfry odręczne), Fashion-MNIST (obrazy ubrań) lub CIFAR-10 (kolorowe obrazy dziesięciu klas obiektów). Dla krótkiego treningu zalecany jest MNIST lub Fashion-MNIST. Pobierz dane przed zajęciami i sprawdź, czy kod się uruchamia. 
+- Zapoznaj się z metodą t-SNE (ang. t-distributed Stochastic Neighbor Embedding), służącą do wizualizacji danych wielowymiarowych w dwóch wymiarach. Dostępna implementacja: sklearn.manifold.TSNE. 
+Cele zadania zostana przedstawione na ćwiczeniach w poniedziałek. Prosze jednak przygotować dodatkowo:
+
+- A — obrazy oryginalne, bez przestawiania pikseli. 
+- B — jedna wspólna losowa permutacja pikseli. Wylosuj kolejność położeń tylko raz i zastosuj ją do wszystkich obrazów treningowych oraz testowych. 
+- C — niezależna losowa permutacja dla każdego obrazu. Każdy obraz treningowy i testowy przetasuj osobno. Ustal przetasowania przed treningiem i nie zmieniaj ich między epokami. 
+Losowo przestaw piksele wewnątrz każdego obrazu, zachowując jego wymiary. Dla obrazów kolorowych przenoś razem wszystkie składowe koloru danego piksela. Etykiety pozostają bez zmian. Pokaż kilka tych samych obrazów w wariantach A, B i C. 

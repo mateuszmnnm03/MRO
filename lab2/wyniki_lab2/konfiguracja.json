@@ -1,0 +1,20 @@
+{
+  "seed": 42,
+  "seed_permutation_B": 43,
+  "seed_permutation_C_train": 44,
+  "seed_permutation_C_test": 45,
+  "train_samples": 20000,
+  "validation_samples": 5000,
+  "test_samples": 10000,
+  "epochs": 5,
+  "batch_size": 128,
+  "learning_rate": 0.001,
+  "tsne_samples": 1000,
+  "tsne_perplexity": 30,
+  "tsne_iterations": 750,
+  "torch": "2.5.1+cu121",
+  "sklearn": "1.6.1",
+  "numpy": "1.26.1",
+  "python": "3.12.0",
+  "device": "cuda"
+}
