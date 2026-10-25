@@ -1,0 +1,127 @@
+{
+  "classes": [
+    "blanket1",
+    "canvas1",
+    "cushion1",
+    "lentils1",
+    "rice1",
+    "stone1"
+  ],
+  "seed": 2026,
+  "dataset_signature": "ec520f5463c193d9a136b1f37d7460adddaaff990ddb6342ed2473f1b1783d58",
+  "versions": {
+    "python": "3.12.0",
+    "numpy": "1.26.4",
+    "torch": "2.5.1+cu121",
+    "torchvision": "0.20.1+cu121",
+    "PyWavelets": "1.8.0"
+  },
+  "wavelets": [
+    "haar",
+    "db2"
+  ],
+  "levels": 3,
+  "energy_definition": "mean(detail_coefficients ** 2); approximation excluded",
+  "feature_names": [
+    "H1",
+    "V1",
+    "D1",
+    "H2",
+    "V2",
+    "D2",
+    "H3",
+    "V3",
+    "D3"
+  ],
+  "group_split": "a,b=train; c=validation; d=test",
+  "counts": {
+    "maly": {
+      "train": 120,
+      "val": 60,
+      "test": 60
+    },
+    "duzy": {
+      "train": 480,
+      "val": 240,
+      "test": 240
+    }
+  },
+  "best_epochs": {
+    "maly": 28,
+    "duzy": 30
+  },
+  "wavelet_checks": {
+    "haar": {
+      "max_reconstruction_error": 5.364418029785156e-07,
+      "relative_total_energy_error": 2.0610140039055384e-07
+    },
+    "db2": {
+      "max_reconstruction_error": 6.556510925292969e-07,
+      "relative_total_energy_error": 4.787148904994889e-08
+    }
+  },
+  "results": [
+    {
+      "model": "CNN_maly",
+      "train_n": 120,
+      "test_n": 240,
+      "accuracy": 0.9708333333333333,
+      "f1_macro": 0.9706083031543589,
+      "small_test_accuracy": 0.9666666666666667
+    },
+    {
+      "model": "CNN_duzy",
+      "train_n": 480,
+      "test_n": 240,
+      "accuracy": 1.0,
+      "f1_macro": 1.0,
+      "small_test_accuracy": 1.0
+    },
+    {
+      "model": "9D_haar_maly",
+      "train_n": 120,
+      "test_n": 240,
+      "accuracy": 0.9333333333333333,
+      "f1_macro": 0.9306506593626942,
+      "small_test_accuracy": 0.9166666666666666
+    },
+    {
+      "model": "9D_haar_duzy",
+      "train_n": 480,
+      "test_n": 240,
+      "accuracy": 0.95,
+      "f1_macro": 0.9483841019788732,
+      "small_test_accuracy": 0.9333333333333333
+    },
+    {
+      "model": "9D_db2_maly",
+      "train_n": 120,
+      "test_n": 240,
+      "accuracy": 0.9,
+      "f1_macro": 0.8930279900028958,
+      "small_test_accuracy": 0.9
+    },
+    {
+      "model": "9D_db2_duzy",
+      "train_n": 480,
+      "test_n": 240,
+      "accuracy": 0.8958333333333334,
+      "f1_macro": 0.883640725745989,
+      "small_test_accuracy": 0.8833333333333333
+    }
+  ],
+  "cnn_delta_pp": 2.9166666666666674,
+  "conclusions": [
+    "- Zwiększenie treningu ze 120 do 480 obrazów wiązało się ze zmianą accuracy CNN o **+2.92 p.p.** na tym samym teście 240. Walidacje różnią się rozmiarem, więc nie izolujemy wyłącznie wpływu liczby obrazów treningowych.",
+    "- Największą accuracy w tym przebiegu uzyskał **CNN_duzy: 100.00%**, F1-macro 1.0000. To opis jednego przebiegu, bez testu istotności.",
+    "- Przy 6 równolicznych klasach oczekiwana accuracy jednostajnego losowania wynosi **16.67%** (nie 50%: problem nie jest binarny). Wszystkie porównania odnoszą się do konkretnego punktu odniesienia.",
+    "- Dla 9D/haar większy trening zmienił accuracy o **+1.67 p.p.**; nie wybrano falki ani parametrów klasyfikatora na podstawie testu.",
+    "- Dla 9D/db2 większy trening zmienił accuracy o **-0.42 p.p.**; nie wybrano falki ani parametrów klasyfikatora na podstawie testu."
+  ],
+  "limitations": [
+    "one fixed group split and seed",
+    "different validation counts",
+    "CNN at 192x192 versus 9D at 576x576",
+    "no statistical significance test"
+  ]
+}

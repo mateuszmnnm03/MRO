@@ -1,0 +1,26 @@
+{
+  "dataset": "CIFAR-10",
+  "subset": "validation from official training set",
+  "n_samples": 1000,
+  "accuracy": 0.367,
+  "f1_macro": 0.3555925821859799,
+  "n_correct": 367,
+  "n_incorrect": 633,
+  "seed": 2026,
+  "split_file": "cifar10_split_indices.npz",
+  "checkpoint": "fourier_lab_model.pt",
+  "architecture": "SmallCNN (definition in notebook)",
+  "normalization": "RGB uint8 -> float32 / 255.0; HWC -> CHW; no standardization",
+  "reload_verified": true,
+  "best_epoch": null,
+  "versions": {
+    "Python": "3.12.0",
+    "Jupyter core": "5.7.2",
+    "numpy": "1.26.1",
+    "matplotlib": "3.8.1",
+    "scipy": "1.15.1",
+    "scikit-learn": "1.6.1",
+    "torch": "2.5.1+cu121",
+    "torchvision": "0.20.1+cu121"
+  }
+}

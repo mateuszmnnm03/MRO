@@ -1,0 +1,39 @@
+{
+  "generator_source": "demonstracyjny; brak generatora prowadzącego",
+  "seed": 2026,
+  "noise_seed_cal": 2126,
+  "noise_seed_test": 2226,
+  "calibration_count": 300,
+  "test_count": 1000,
+  "selection_criterion": "minimum MSE on 300 clean/noisy calibration pairs; no labels",
+  "center_exclusion_radius": 3,
+  "detected_pair_shifted_row_col": [
+    [
+      16,
+      9
+    ],
+    [
+      16,
+      23
+    ]
+  ],
+  "notch_candidates": [
+    0,
+    1,
+    2
+  ],
+  "notch_radius": 0,
+  "gaussian_candidates": [
+    0.3,
+    0.5,
+    0.75,
+    1.0,
+    1.25,
+    1.5
+  ],
+  "gaussian_sigma": 1.25,
+  "removed_coefficients_per_channel": 2,
+  "gaussian_boundary_mode": "reflect",
+  "clip_for_computation": false,
+  "checkpoint_sha256": "9e88cb2438ac3493814b3949a0e7f9502ea01df4ab9275b28928517243160bf8"
+}

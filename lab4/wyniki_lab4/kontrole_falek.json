@@ -1,0 +1,10 @@
+{
+  "haar": {
+    "max_reconstruction_error": 5.364418029785156e-07,
+    "relative_total_energy_error": 2.0610140039055384e-07
+  },
+  "db2": {
+    "max_reconstruction_error": 6.556510925292969e-07,
+    "relative_total_energy_error": 4.787148904994889e-08
+  }
+}

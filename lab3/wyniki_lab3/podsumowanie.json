@@ -1,0 +1,177 @@
+{
+  "config": {
+    "generator_source": "demonstracyjny; brak generatora prowadzącego",
+    "seed": 2026,
+    "noise_seed_cal": 2126,
+    "noise_seed_test": 2226,
+    "calibration_count": 300,
+    "test_count": 1000,
+    "selection_criterion": "minimum MSE on 300 clean/noisy calibration pairs; no labels",
+    "center_exclusion_radius": 3,
+    "detected_pair_shifted_row_col": [
+      [
+        16,
+        9
+      ],
+      [
+        16,
+        23
+      ]
+    ],
+    "notch_candidates": [
+      0,
+      1,
+      2
+    ],
+    "notch_radius": 0,
+    "gaussian_candidates": [
+      0.3,
+      0.5,
+      0.75,
+      1.0,
+      1.25,
+      1.5
+    ],
+    "gaussian_sigma": 1.25,
+    "removed_coefficients_per_channel": 2,
+    "gaussian_boundary_mode": "reflect",
+    "clip_for_computation": false,
+    "checkpoint_sha256": "9e88cb2438ac3493814b3949a0e7f9502ea01df4ab9275b28928517243160bf8"
+  },
+  "results": [
+    {
+      "variant": "Czyste",
+      "accuracy": 0.418,
+      "f1_macro": 0.40545470462924194,
+      "mse": 0.0,
+      "delta_accuracy_vs_noisy_pp": 10.7
+    },
+    {
+      "variant": "Zakłócone",
+      "accuracy": 0.311,
+      "f1_macro": 0.24986297832531554,
+      "mse": 0.03124999999975731,
+      "delta_accuracy_vs_noisy_pp": 0.0
+    },
+    {
+      "variant": "Fourier-notch",
+      "accuracy": 0.416,
+      "f1_macro": 0.4027685731061686,
+      "mse": 8.691440567007814e-05,
+      "delta_accuracy_vs_noisy_pp": 10.499999999999998
+    },
+    {
+      "variant": "Gauss",
+      "accuracy": 0.302,
+      "f1_macro": 0.29359628464990195,
+      "mse": 0.007084954601889444,
+      "delta_accuracy_vs_noisy_pp": -0.9000000000000008
+    }
+  ],
+  "paired_changes": {
+    "Fourier-notch": {
+      "rescued": 172,
+      "harmed": 67,
+      "net": 105
+    },
+    "Gauss": {
+      "rescued": 173,
+      "harmed": 182,
+      "net": -9
+    }
+  },
+  "noise_delta_vs_clean_pp": -10.7,
+  "peak_evidence": [
+    {
+      "row": 16,
+      "column": 9,
+      "power_clean": 49.2054822517091,
+      "power_noisy": 16401.69721012556,
+      "power_ratio": 333.3306871422008
+    },
+    {
+      "row": 16,
+      "column": 23,
+      "power_clean": 49.20548225170911,
+      "power_noisy": 16401.69721012556,
+      "power_ratio": 333.33068714220076
+    }
+  ],
+  "fft": {
+    "max_abs_reconstruction_error": 2.220446049250313e-16,
+    "mse": 1.741965078483548e-33,
+    "max_imaginary_error": 1.6219664500383146e-16,
+    "mse_without_phase": 0.12193635236745526
+  },
+  "example": {
+    "test_position": 0,
+    "official_test_index": 4549,
+    "true_class": "automobile",
+    "variants": {
+      "Czyste": {
+        "prediction": "truck",
+        "mse": 0.0
+      },
+      "Zakłócone": {
+        "prediction": "truck",
+        "mse": 0.031249999898988457
+      },
+      "Fourier-notch": {
+        "prediction": "truck",
+        "mse": 5.680818352376733e-05
+      },
+      "Gauss": {
+        "prediction": "airplane",
+        "mse": 0.008484813961821441
+      }
+    }
+  },
+  "checkpoint_unchanged": true,
+  "calibration_trials": [
+    {
+      "method": "notch",
+      "parameter": 0,
+      "mse": 9.385200936866109e-05
+    },
+    {
+      "method": "notch",
+      "parameter": 1,
+      "mse": 0.0003941873330680651
+    },
+    {
+      "method": "notch",
+      "parameter": 2,
+      "mse": 0.000971718255430735
+    },
+    {
+      "method": "gauss",
+      "parameter": 0.3,
+      "mse": 0.03087726532810372
+    },
+    {
+      "method": "gauss",
+      "parameter": 0.5,
+      "mse": 0.022065237296658383
+    },
+    {
+      "method": "gauss",
+      "parameter": 0.75,
+      "mse": 0.013158843239494386
+    },
+    {
+      "method": "gauss",
+      "parameter": 1.0,
+      "mse": 0.008640246403621809
+    },
+    {
+      "method": "gauss",
+      "parameter": 1.25,
+      "mse": 0.007014284813764474
+    },
+    {
+      "method": "gauss",
+      "parameter": 1.5,
+      "mse": 0.007181611991141526
+    }
+  ]
+}

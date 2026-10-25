@@ -1,0 +1,47 @@
+[
+  {
+    "method": "notch",
+    "parameter": 0,
+    "mse": 9.385200936866109e-05
+  },
+  {
+    "method": "notch",
+    "parameter": 1,
+    "mse": 0.0003941873330680651
+  },
+  {
+    "method": "notch",
+    "parameter": 2,
+    "mse": 0.000971718255430735
+  },
+  {
+    "method": "gauss",
+    "parameter": 0.3,
+    "mse": 0.03087726532810372
+  },
+  {
+    "method": "gauss",
+    "parameter": 0.5,
+    "mse": 0.022065237296658383
+  },
+  {
+    "method": "gauss",
+    "parameter": 0.75,
+    "mse": 0.013158843239494386
+  },
+  {
+    "method": "gauss",
+    "parameter": 1.0,
+    "mse": 0.008640246403621809
+  },
+  {
+    "method": "gauss",
+    "parameter": 1.25,
+    "mse": 0.007014284813764474
+  },
+  {
+    "method": "gauss",
+    "parameter": 1.5,
+    "mse": 0.007181611991141526
+  }
+]
